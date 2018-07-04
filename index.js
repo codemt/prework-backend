@@ -47,13 +47,14 @@ app.post('/api/form',(req,res)=>{
      let transporter = nodemailer.createTransport({
 
         //host: 'smtp.ethereal.email',
-         host: 'mail.google.com',
-         service : 'gmail',
+        // host: 'mail.google.com',
+         host : 'pop3.live.com',
+         service : 'outlook',
          port: 587,
          secure: false, // true for 465, false for other ports
          auth: {
-             user: 'mythilmeshram@gmail.com', // generated ethereal user
-             pass: 'toxicmetal@2013' // generated ethereal password
+             user: 'mythilmeshram@outlook.com', // generated ethereal user
+             pass: 'neverwant2giveup' // generated ethereal password
              //
          }
 
@@ -61,7 +62,7 @@ app.post('/api/form',(req,res)=>{
 
      // setup email data with unicode symbols
     let mailOptions = {
-        from: '"Mithilesh" <mythilmeshram@gmail.com>', // sender address
+        from: '"Mithilesh" <mythilmeshram@outlook.com>', // sender address
         to: 'mithilesh.tarkar@gmail.com', // list of receivers
         subject: 'Teach for India - Volunteer Request', // Subject line
         text: 'Hello world?', // plain text body
