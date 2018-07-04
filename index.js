@@ -3,7 +3,10 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const app = express();
-// const cors = require('cors');
+const cors = require('cors');
+// enable cors for all request.
+app.use(cors())
+
 
 //app.use(cors());
 
